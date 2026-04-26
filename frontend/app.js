@@ -1,3 +1,8 @@
+/* ── Config ───────────────────────────────────────────────────────────────── */
+// When deploying frontend to Vercel, change this to your Render backend URL
+// Example: const BACKEND_URL = 'https://grounded-ai-backend.onrender.com';
+const BACKEND_URL = ''; // Leave empty for local development
+
 /* ── State ──────────────────────────────────────────────────────────────── */
 const state = {
   pdfLoaded: false,
@@ -88,7 +93,7 @@ async function handleFile(file) {
     const formData = new FormData();
     formData.append('file', file);
 
-    const res = await fetch('/upload-pdf', { method: 'POST', body: formData });
+    const res = await fetch(`${BACKEND_URL}/upload-pdf`, { method: 'POST', body: formData });
     const data = await res.json();
 
     clearInterval(progInterval);
@@ -172,7 +177,7 @@ async function handleSend() {
   setStatus('Thinking…', 'loading');
 
   try {
-    const res = await fetch('/ask', {
+    const res = await fetch(`${BACKEND_URL}/ask`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query: text, history: state.history.slice(-10) }),
