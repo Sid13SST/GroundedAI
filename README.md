@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/solid/file-pdf.svg" width="80" alt="PDF Icon" style="filter: invert(53%) sepia(50%) saturate(5412%) hue-rotate(224deg) brightness(101%) contrast(97%); margin-bottom: 20px;" />
   
   # GroundedAI
   
