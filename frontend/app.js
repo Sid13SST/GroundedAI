@@ -1,7 +1,7 @@
 /* ── Config ───────────────────────────────────────────────────────────────── */
 // When deploying frontend to Vercel, change this to your Render backend URL
 // Example: const BACKEND_URL = 'https://grounded-ai-backend.onrender.com';
-const BACKEND_URL = ''; // Leave empty for local development
+const BACKEND_URL = 'https://groundedai-5t1s.onrender.com'; // Point to Render backend
 
 /* ── State ──────────────────────────────────────────────────────────────── */
 const state = {
